@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinasi Wisata</title> 
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background-image: url('https://images.unsplash.com/photo-1525895889391-6bee97c3b1d4?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .explore-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #00bfa5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .explore-btn:hover {
+            background-color: #009e85;
+        }
+
+        /* Destination Section */
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            font-size: 2em;
+        }
+
+        .destination {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .destination:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .destination h2 {
+            color: #00bfa5;
+        }
+
+        .destination p {
+            line-height: 1.6;
+        }
+
+        .activity {
+            margin-top: 10px;
+        }
+
+        .activity ul {
+            padding-left: 20px;
+        }
+
+        .destination .read-more-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #00bfa5;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .destination .read-more-btn:hover {
+            background-color: #009e85;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-overlay">
+            <h1>Destinasi Wisata Indonesia</h1>
+            <p>Temukan keindahan alam dan budaya di seluruh nusantara</p>
+            <a href="#destinations" class="explore-btn">Jelajahi Sekarang</a>
+        </div>
+    </div>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h1>Tujuan Destinasi Wisata</h1>
+
+        <div class="destination">
+            <h2>Pantai Bali</h2>
+            <p><strong>Deskripsi:</strong> Pantai Bali adalah destinasi ikonik dengan pantai berpasir putih yang indah dan pemandangan laut yang memukau. Tempat ini terkenal untuk bersantai dan menikmati keindahan alam.</p>
+            <div class="activity">
+                <strong>Aktivitas:</strong>
+                <ul>
+                    <li>Berselancar</li>
+                    <li>Snorkeling</li>
+                    <li>Menyaksikan matahari terbenam</li>
+                </ul>
+            </div>
+            <a href="#" class="read-more-btn">Selengkapnya</a>
+        </div>
+
+        <div class="destination">
+            <h2>Kebun Teh Bogor</h2>
+            <p><strong>Deskripsi:</strong> Kebun Teh Bogor menawarkan pemandangan perbukitan hijau yang asri dan udara yang sejuk, sangat cocok untuk wisata alam dan fotografi.</p>
+            <div class="activity">
+                <strong>Aktivitas:</strong>
+                <ul>
+                    <li>Berjalan-jalan di perkebunan teh</li>
+                    <li>Mengambil foto lanskap</li>
+                    <li>Menikmati teh segar di lokasi</li>
+                </ul>
+            </div>
+            <a href="#" class="read-more-btn">Selengkapnya</a>
+        </div>
+
+        <div class="destination">
+            <h2>Pantai Sawarna</h2>
+            <p><strong>Deskripsi:</strong> Pantai Sawarna adalah surga tersembunyi di Banten dengan pasir putih dan air
+                laut jernih, cocok untuk yang menyukai petualangan dan keindahan alam yang masih alami.</p>
+                <div class="activity">
+                    <strong>Aktivitas:</strong>
+                    <ul>
+                        <li>Berenang</li>
+                        <li>Jelajah gua karst</li>
+                        <li>Menyaksikan sunset yang indah</li>
+                    </ul>
+                </div>
+                <a href="#" class="read-more-btn">Selengkapnya</a>
+            </div>
+    
+            <div class="destination">
+                <h2>Museum Tsunami Aceh</h2>
+                <p><strong>Deskripsi:</strong> Museum Tsunami Aceh didirikan sebagai penghormatan bagi para korban tsunami 2004 dan untuk memberikan edukasi tentang bencana alam. Museum ini memiliki arsitektur yang simbolis dan ruang pameran interaktif.</p>
+                <div class="activity">
+                    <strong>Aktivitas:</strong>
+                    <ul>
+                        <li>Menyaksikan dokumentasi bencana tsunami</li>
+                        <li>Mempelajari mitigasi bencana</li>
+                        <li>Menikmati arsitektur bangunan yang unik</li>
+                    </ul>
+                </div>
+                <a href="#" class="read-more-btn">Selengkapnya</a>
+            </div>
+    
+            <div class="destination">
+                <h2>Museum Nasional Jakarta</h2>
+                <p><strong>Deskripsi:</strong> Museum Nasional Jakarta, atau dikenal sebagai Museum Gajah, adalah museum terbesar di Indonesia yang menampilkan sejarah, budaya, dan artefak penting dari berbagai penjuru Nusantara.</p>
+                <div class="activity">
+                    <strong>Aktivitas:</strong>
+                    <ul>
+                        <li>Mengunjungi koleksi arkeologi dan sejarah</li>
+                        <li>Mempelajari budaya Indonesia</li>
+                        <li>Menyaksikan pameran seni dan artefak kuno</li>
+                    </ul>
+                </div>
+                <a href="#" class="read-more-btn">Selengkapnya</a>
+            </div>
+    
+        </section>
+    
+    </body>
+    </html>
+    

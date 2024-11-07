@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Museum Wisata</title>
+    <link rel="stylesheet" href="StyleMuseum.css">
+    <style>
+        /* Contoh CSS untuk galeri */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px; /* Jarak antar item */
+        }
+        .gallery-item {
+            border: 1px solid #ccc; /* Garis batas item */
+            border-radius: 8px; /* Sudut melengkung */
+            overflow: hidden; /* Sembunyikan overflow */
+            max-width: 300px; /* Lebar maksimum item */
+        }
+        .gallery-item img {
+            width: 100%; /* Gambar memenuhi lebar item */
+            height: auto; /* Tinggi otomatis */
+        }
+        .description {
+            padding: 10px; /* Ruang dalam untuk deskripsi */
+            background-color: #f9f9f9; /* Warna latar belakang deskripsi */
+            text-align: center; /* Rata tengah */
+        }
+        /* Gaya untuk numbering */
+        .numbering {
+            margin-bottom: 10px; /* Jarak bawah untuk numbering */
+            font-weight: bold; /* Menebalkan font numbering */
+            text-align: center; /* Rata tengah */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Galeri Museum Wisata</h1>
+    </header>
+    <main>
+        <section class="gallery">
+            <h2>Galeri Foto</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <div class="numbering">1.</div> <!-- Bullet numbering -->
+                    <img src="img/National-Museum-of-Indonesia.jpg" alt="National Museum of Indonesia">
+                    <div class="description">
+                        <p>Museum Nasional Indonesia adalah salah satu museum terbesar dan terpenting di Indonesia, yang menyimpan berbagai koleksi budaya dan sejarah.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="numbering">2.</div> <!-- Bullet numbering -->
+                    <img src="img/Museum-Tsunami-Aceh.jpg" alt="Museum Tsunami Aceh">
+                    <div class="description">
+                        <p>Museum Tsunami Aceh dibangun untuk mengenang peristiwa tsunami yang terjadi pada tahun 2004, serta memberikan edukasi tentang bencana alam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Galeri Museum Wisata. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perjalanan Trip Wisata</title>
+    <link rel="stylesheet" href="style.css"> <!-- Gaya CSS terpisah jika ada -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0ff;
+            color: #333;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ccc; /* Garis vertikal dan horizontal di setiap kolom */
+        }
+
+        th {
+            background-color: #00bfb2;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Responsif */
+        @media (max-width: 600px) {
+            th, td {
+                display: block;
+                width: 100%;
+            }
+
+            th {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Perjalanan Trip Wisata</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Paket Wisata</th>
+                <th>Tujuan</th>
+                <th>Durasi</th>
+                <th>Harga</th>
+                <th>Deskripsi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Paket A</td>
+                <td>Pantai Bali</td>
+                <td>3 Hari 2 Malam</td>
+                <td>Rp 2.500.000</td>
+                <td>Menikmati keindahan pantai, budaya, dan kuliner di Bali.</td>
+            </tr>
+            <tr>
+                <td>Paket B</td>
+                <td>Kebun Teh Bogor</td>
+                <td>2 Hari 1 Malam</td>
+                <td>Rp 1.800.000</td>
+                <td>Eksplorasi kebun teh dengan pemandangan yang menakjubkan dan udara sejuk.</td>
+            </tr>
+            <tr>
+                <td>Paket C</td>
+                <td>Pantai Sawarna</td>
+                <td>3 Hari 2 Malam</td>
+                <td>Rp 2.200.000</td>
+                <td>Wisata ke pantai tersembunyi dengan pasir putih dan sunset yang memukau.</td>
+            </tr>
+            <tr>
+                <td>Paket D</td>
+                <td>Museum Tsunami Aceh</td>
+                <td>2 Hari 1 Malam</td>
+                <td>Rp 1.500.000</td>
+                <td>Belajar tentang bencana tsunami dan mengenang para korban melalui pameran yang edukatif.</td>
+            </tr>
+            <tr>
+                <td>Paket E</td>
+                <td>Museum Nasional Jakarta</td>
+                <td>1 Hari</td>
+                <td>Rp 1.200.000</td>
+                <td>Mengenal sejarah dan budaya Indonesia melalui koleksi artefak yang lengkap.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

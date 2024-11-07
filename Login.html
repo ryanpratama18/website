@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Reset margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya dasar halaman */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #11c2cb, #25c6fc);
+            font-family: Arial, sans-serif;
+            color: #444;
+            overflow: hidden;
+        }
+
+        /* Kotak form login */
+        .login-form {
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            transition: transform 0.3s;
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .login-form:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-form h1 {
+            font-size: 2.2em;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        /* Efek animasi input */
+        .login-form input {
+            margin: 12px 0;
+            padding: 15px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .login-form input:focus {
+            border-color: #11cbc8;
+            box-shadow: 0 0 8px rgba(17, 203, 200, 0.4);
+            outline: none;
+        }
+
+        .login-form button {
+            padding: 15px;
+            width: 100%;
+            background: linear-gradient(to right, #11b5cb, #25f5fc);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animasi loading pada tombol */
+        .login-form button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 300%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transition: transform 0.3s;
+            transform: scale(0);
+        }
+
+        .login-form button:hover::after {
+            transform: scale(1);
+            left: -50%;
+            transition: transform 0.3s;
+        }
+
+        .login-form button:hover {
+            background: linear-gradient(to right, #25fcea, #6a11cb);
+        }
+
+        .login-form p {
+            margin-top: 20px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .login-form a {
+            color: #11a0cb;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .login-form a:hover {
+            color: #25fcd5;
+        }
+
+        /* Gaya animasi masukan */
+        input[type="text"],
+        input[type="password"] {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        /* Efek ikon input */
+        .icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+            font-size: 1.2em;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .login-form input:focus + .icon {
+            color: #11cbbb;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h1>Login</h1>
+        <form action="Logout.php" method="POST">
+            <div style="position: relative;">
+                <input type="text" name="username" placeholder="Username" required>
+                <span class="icon">👤</span>
+            </div>
+            <div style="position: relative;">
+                <input type="password" name="password" placeholder="Password" required>
+                <span class="icon">🔒</span>
+            </div>
+            <button type="submit">Log In</button>
+        </form>
+        <p>Belum punya akun? <a href="register.php">Daftar di sini</a></p>
+    </div>
+</body>
+</html>

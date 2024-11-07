@@ -1,0 +1,196 @@
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f0ff;
+    color: #333;
+}
+
+/* Kontainer Utama */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar content recommended";
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: #00bfbc;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.title h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+}
+
+.search button {
+    padding: 10px 15px;
+    background-color: #009d90;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: #003366;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.sidebar ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.sidebar ol li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.sidebar ol li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.sidebar ol li a:hover {
+    color: #00bfbf;
+}
+
+/* Konten */
+.content {
+    grid-area: content;
+    background-color: rgb(179, 245, 238);
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.content h2 {
+    color: #005cbf;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main-image img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Rekomendasi */
+.recommended {
+    grid-area: recommended;
+    background-color: whitesmoke;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.recommended h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recommended .place {
+    margin-bottom: 20px;
+}
+
+.recommended .place img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.recommended .place p {
+    font-size: 0.9em;
+}
+
+/* Media */
+.media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.media audio, .media video {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Logo */
+.logo-image {
+    height: auto;
+    max-width: 150px;
+    width: 100%;
+}
+
+/* Gaya footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #00bf99;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styling untuk elemen embed */
+embed {
+    max-width: 100%; /* Membuat elemen embed tidak lebih besar dari kontainer */
+    height: auto; /* Menjaga proporsi gambar/media */
+    border-radius: 5px; /* Membulatkan sudut */
+    border: 2px solid #ccc; /* Menambahkan border tipis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada elemen embed */
+    display: block; /* Membuat embed sebagai blok untuk pemformatan yang lebih baik */
+    margin: 20px auto; /* Memberikan jarak sekitar elemen dan membuatnya terpusat */
+}
+
+/* Styling untuk elemen embed dengan video */
+embed[type="video"] {
+    width: 100%; /* Membuat video menggunakan lebar penuh kontainer */
+    height: 400px; /* Menetapkan tinggi tetap untuk video */
+    border-radius: 8px; /* Membulatkan sudut video */
+}
+
+/* Styling untuk elemen embed dengan audio */
+embed[type="audio"] {
+    width: 100%;
+    height: 40px; /* Menetapkan tinggi elemen audio */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Menambahkan latar belakang untuk elemen audio */
+    border: 1px solid #ccc;
+}

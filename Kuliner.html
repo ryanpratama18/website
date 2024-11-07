@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Kuliner Indonesia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f5f5f5, #e3f2fd);
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2bc0aa;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .iframe-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .iframe-container .card {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .iframe-container .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-color: #2bc091;
+        }
+
+        .iframe-container h2 {
+            color: #2bc0aa;
+            font-size: 1.5em;
+            margin-top: 0;
+        }
+
+        .iframe-container p {
+            color: #666;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #2bc091;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            background-color: #239c7a;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        .overlay-content {
+            max-width: 500px;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+
+        .close-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 16px;
+            background-color: #2bc091;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+        }
+
+        .close-btn:hover {
+            background-color: #239c7a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wisata Kuliner Indonesia</h1>
+    <p>Berikut adalah makanan khas di destinasi wisata terbaik Indonesia. Klik "Selengkapnya" untuk melihat detailnya!</p>
+
+    <div class="iframe-container">
+        <div class="card">
+            <h2>Ayam Betutu Bali</h2>
+            <p>Ayam Betutu adalah makanan khas Bali yang diolah dengan rempah lengkap...</p>
+            <button class="read-more" onclick="showOverlay('Ayam Betutu Bali', 'Ayam Betutu adalah makanan khas Bali yang diolah dengan rempah lengkap dan dipanggang atau dikukus hingga bumbu meresap. Cocok dinikmati setelah bermain di pantai.', 'Kuta, Bali')">Selengkapnya</button>
+        </div>
+
+        <div class="card">
+            <h2>Tauge Goreng Bogor</h2>
+            <p>Tauge goreng adalah makanan khas Bogor yang terdiri dari tauge, mie, dan tahu...</p>
+            <button class="read-more" onclick="showOverlay('Tauge Goreng Bogor', 'Tauge goreng adalah makanan khas Bogor yang terdiri dari tauge, mie, dan tahu, disajikan dengan bumbu oncom pedas gurih. Nikmati sambil menikmati pemandangan kebun teh yang indah.', 'Puncak, Bogor')">Selengkapnya</button>
+        </div>
+
+        <div class="card">
+            <h2>Ikan Bakar Sawarna</h2>
+            <p>Ikan bakar segar dari Pantai Sawarna merupakan pilihan populer dengan bumbu khas...</p>
+            <button class="read-more" onclick="showOverlay('Ikan Bakar Sawarna', 'Ikan bakar segar dari Pantai Sawarna merupakan pilihan populer dengan bumbu khas yang kaya akan rasa, disajikan dengan sambal dan lalapan.', 'Desa Sawarna, Banten')">Selengkapnya</button>
+        </div>
+
+        <div class="card">
+            <h2>Soto Betawi Jakarta</h2>
+            <p>Soto Betawi adalah kuliner khas Jakarta dengan kuah santan gurih, daging sapi...</p>
+            <button class="read-more" onclick="showOverlay('Soto Betawi Jakarta', 'Soto Betawi adalah kuliner khas Jakarta dengan kuah santan gurih, daging sapi, dan jeroan. Tempat yang cocok untuk menikmati hidangan ini setelah mengunjungi museum.', 'Jl. Thamrin No. 45, Jakarta')">Selengkapnya</button>
+        </div>
+
+        <div class="card">
+            <h2>Mie Aceh</h2>
+            <p>Mie Aceh adalah hidangan mie pedas yang khas, dimasak dengan rempah-rempah...</p>
+            <button class="read-more" onclick="showOverlay('Mie Aceh', 'Mie Aceh adalah hidangan mie pedas yang khas, dimasak dengan rempah-rempah dan pilihan daging. Cocok dinikmati setelah berkunjung ke Museum Tsunami Aceh.', 'Jl. Iskandar Muda, Banda Aceh')">Selengkapnya</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="overlay-content" id="overlayContent">
+            <h2 id="overlayTitle"></h2>
+            <p id="overlayDescription"></p>
+            <p><strong>Lokasi: </strong><span id="overlayLocation"></span></p>
+            <button class="close-btn" onclick="hideOverlay()">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        function showOverlay(title, description, location) {
+            document.getElementById("overlay").style.display = "flex";
+            document.getElementById("overlayTitle").textContent = title;
+            document.getElementById("overlayDescription").textContent = description;
+            document.getElementById("overlayLocation").textContent = location;
+        }
+
+        function hideOverlay() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</body>
+</html>

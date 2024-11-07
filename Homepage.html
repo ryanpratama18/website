@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDONESIA</title>
+    <link rel="stylesheet" href="homepage.css"> <!-- Menghubungkan file CSS -->
+    <style>
+        /* Tambahan gaya untuk bullet numbering */
+        .sidebar {
+            background-color: #f2f2f2;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .sidebar ol {
+            list-style-type: decimal; /* Menampilkan angka */
+            padding-left: 20px; /* Jarak kiri untuk nomor */
+        }
+
+        .sidebar ol li {
+            margin-bottom: 15px; /* Jarak bawah antara item (lebih besar) */
+            line-height: 1.5; /* Meningkatkan ketinggian garis untuk keterbacaan */
+        }
+
+        .sidebar ol li a {
+            text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+            color: #333; /* Warna teks */
+            transition: color 0.3s; /* Efek transisi saat hover */
+        }
+
+        .sidebar ol li a:hover {
+            color: #005cbf; /* Warna saat hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="img/AR.jpg" alt="Logo" class="logo-image">
+            </div>
+            <div class="title">
+                <h1>INDONESIA</h1>
+                <p>SELAMAT DATANG DI WEB SAYA
+                   ADE RYAN PRATAMA
+                </p>
+            </div>
+            <div class="search">
+                <form action="search-results.html" method="GET">
+                    <input type="text" name="query" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <ol>
+                <li><a href="Login.html">Login</a></li>
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="GaleryMuseum.html">GaleryMuseum</a></li>
+                <li><a href="tripTabelwisata.html">Daftar trip</a></li>
+                <li><a href="TujuanDestinasi.html">Tujuan Destinasi</a></li>
+                <li><a href="Kuliner.html">Kuliner</a></li>
+                <li><a href="SignOut.html">Sign Out</a></li>
+            </ol>
+        </aside>
+
+        <main class="content">
+            <h2>MY HOLYDAY</h2>
+            <div class="main-image">
+                <img src="img/bendera merah putih dan peta indonesia.jpg" alt="Negara Kesatuan Republik Indonesia (NKRI)">
+            </div>
+            <p>Indonesia adalah negara kepulauan terbesar di dunia yang kaya akan keindahan alam. Dengan lebih dari 17.000 pulau, negara ini menawarkan berbagai destinasi alam yang menakjubkan, mulai dari pantai berpasir putih, gunung-gunung yang menjulang tinggi, hutan hujan tropis, hingga danau dan air terjun yang mempesona. Keberagaman ekosistemnya, baik di darat maupun bawah laut, menjadikan Indonesia sebagai salah satu titik panas keanekaragaman hayati di dunia. Keindahan alam Indonesia tidak hanya menarik bagi wisatawan, tetapi juga mencerminkan kekayaan budaya dan warisan alam yang harus dilestarikan.</p>
+
+            <div class="media">
+                <h3>Listen to Traditional Music</h3>
+                <audio id="background-audio" controls>
+                    <source src="mp3/videoplayback.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+                <h3>Ini lah INDONESIA</h3>
+                <video id="promo-video" controls onplay="playAudio()" onpause="pauseAudio()">
+                    <source src="mp4/videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </div>
+        </main>
+
+        <aside class="recommended">
+            <h3>Rekomendasi Wisata Liburan</h3>
+            <div class="place">
+                <img src="img/bgr.jpg" alt="Wisata Kebun Teh">
+                <p><strong>Wisata Kebun Teh</strong></p>
+                <p>Kebun Teh Gunung Mas di Bogor adalah destinasi wisata yang menawan, menawarkan pemandangan ladang teh yang luas dan udara sejuk. Pengunjung dapat menikmati aktivitas seperti berjalan di kebun teh dan trekking, serta belajar tentang proses budidaya teh. Fasilitas seperti kafe dan area istirahat membuat kunjungan semakin nyaman. Dengan akses yang baik, kebun teh ini adalah pilihan ideal untuk melarikan diri dari kesibukan kota dan menikmati keindahan alam.</p>
+            </div>
+            <div class="place">
+                <img src="img/sunrise view.jpg" alt="Pantai Sawarna">
+                <p><strong>Pantai Sawarna</strong></p>
+                <p>Pantai Sawarna, di Banten, Indonesia, adalah pantai tersembunyi dengan pasir putih dan air jernih. Dikelilingi tebing karang dan hutan tropis, pantai ini populer untuk surfing dan snorkeling. Daya tariknya termasuk Goa Lalay dan Bukit Lio, serta sunset yang memukau, menjadikannya tempat ideal untuk menikmati keindahan alam.</p>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        const audio = document.getElementById('background-audio');
+        const video = document.getElementById('promo-video');
+
+        audio.loop = true;
+        audio.volume = 0.2;
+
+        function playAudio() {
+            if (audio.paused) {
+                audio.play();
+            }
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        video.addEventListener('ended', function() {
+            audio.pause();
+        });
+    </script>
+</body>
+</html>
